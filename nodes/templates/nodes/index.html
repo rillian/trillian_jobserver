@@ -1,7 +1,7 @@
-{% if up_node_list %}
+{% if node_list %}
   <h2>Available nodes</h2>
   <ul>
-    {% for node in up_node_list %}
+    {% for node in node_list %}
       <li><a href="/nodes/{{ node.name }}/">{{ node.name }}</a></li>
     {% endfor %}
   </ul>
