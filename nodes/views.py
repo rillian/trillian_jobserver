@@ -1,5 +1,4 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
 
 from nodes.models import Node
 
@@ -9,4 +8,5 @@ def index(request):
   return render(request, 'nodes/index.html', context)
 
 def detail(request, node_id):
-  return HttpResponse("Info on node %s." % node_id)
+  node = get_object_or_404(Node, name=node_id)
+  return render(request, 'nodes/detail.html', {'node': node})
