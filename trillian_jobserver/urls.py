@@ -8,6 +8,6 @@ urlpatterns = patterns('',
     # url(r'^$', 'trillian_jobserver.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^nodes/', include('node.urls')),
+    url(r'^nodes/', include('nodes.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from node.models import Node
+from nodes.models import Node
 
 class NodeAdmin(admin.ModelAdmin):
   list_display = ('name', 'description', 'is_up')
