@@ -2,7 +2,7 @@
   <h2>Available nodes</h2>
   <ul>
     {% for node in node_list %}
-      <li><a href="/nodes/{{ node.name }}/">{{ node.name }}</a></li>
+    <li><a href="{% url 'detail' node.name %}">{{ node.name }}</a></li>
     {% endfor %}
   </ul>
 {% else %}
