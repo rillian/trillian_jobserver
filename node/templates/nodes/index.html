@@ -1,0 +1,10 @@
+{% if up_node_list %}
+  <h2>Available nodes</h2>
+  <ul>
+    {% for node in up_node_list %}
+      <li><a href="/nodes/{{ node.name }}/">{{ node.name }}</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No nodes available.</p>
+{% endif %}
